@@ -48,7 +48,7 @@ class SendSms():
 
     def Dsmartgo(self):
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -112,13 +112,13 @@ class SendSms():
 
         
 
-#yıldırımlord by
+
 
     # kigili.com
 
     def Kigili(self): 
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -184,7 +184,7 @@ class SendSms():
 
     def KahveDunyasi(self):    
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -238,7 +238,7 @@ class SendSms():
 
     def NaosStars(self):
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -308,7 +308,7 @@ class SendSms():
 
     def Wmf(self):        
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -376,7 +376,7 @@ class SendSms():
 
     def IsteGelsin(self):
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -426,7 +426,7 @@ class SendSms():
 
     def Bim(self):         
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -476,7 +476,7 @@ class SendSms():
 
 
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -524,7 +524,7 @@ class SendSms():
 
     def Tiklagelsin(self):
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -590,7 +590,7 @@ class SendSms():
 
     def A101(self):
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -640,7 +640,7 @@ class SendSms():
 
     def Englishhome(self):
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -690,7 +690,7 @@ class SendSms():
 
     def Sakasu(self):
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -740,7 +740,7 @@ class SendSms():
 
     def Rentiva(self): 
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -794,7 +794,7 @@ class SendSms():
 
     def Bineq(self):
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -848,7 +848,7 @@ class SendSms():
 
 
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -902,7 +902,7 @@ class SendSms():
 
 
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -954,7 +954,7 @@ class SendSms():
 
     def Dgn(self):          
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1010,7 +1010,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1066,7 +1066,7 @@ class SendSms():
 
            
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1120,7 +1120,7 @@ class SendSms():
 
     def Mopas(self):          
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1168,7 +1168,7 @@ class SendSms():
 
     def Icq(self):
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1224,7 +1224,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1280,7 +1280,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1334,7 +1334,7 @@ class SendSms():
 
     def Buyur(self):
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1392,7 +1392,7 @@ class SendSms():
 
 
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1440,7 +1440,7 @@ class SendSms():
 
     def Pinar(self):         
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1496,7 +1496,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1552,7 +1552,7 @@ class SendSms():
 
 
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1606,7 +1606,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1656,7 +1656,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1706,7 +1706,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1760,7 +1760,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1818,7 +1818,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1872,7 +1872,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1924,7 +1924,7 @@ class SendSms():
 
     
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -1974,7 +1974,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -2030,7 +2030,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -2078,7 +2078,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -2132,7 +2132,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -2188,7 +2188,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -2240,7 +2240,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -2296,7 +2296,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -2352,7 +2352,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -2408,7 +2408,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -2464,7 +2464,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -2522,7 +2522,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -2576,7 +2576,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -2630,7 +2630,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -2686,7 +2686,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -2736,7 +2736,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -2792,7 +2792,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
@@ -2846,7 +2846,7 @@ class SendSms():
 
             
 
-        liste = [self.phone, self.phone2, self.phone3, self.phone4, self.phone5]
+        liste = [self.phone]
 
         bos_olmayan = len([x for x in liste if x != "bos"])
 
